@@ -22,6 +22,11 @@ tauri = { version = "2", features = [] }
 tauri-plugin-opener = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+# W3C WebDriver server for the verify-kugiri skill. Opt-in and debug-only; never ship it.
+tauri-plugin-webdriver = { version = "0.2", optional = true }
+
+[features]
+webdriver = ["dep:tauri-plugin-webdriver"]
 
 
 # Read the optimization guideline for more details: https://tauri.app/concept/size/#cargo-configuration
